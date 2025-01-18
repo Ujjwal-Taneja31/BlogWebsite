@@ -96,10 +96,7 @@ const key = 'blogdata';
     alert('Data not Found !');
   }else{
     const Storedata = JSON.parse(localStorage.getItem(key)); 
-    if(Storedata.length === 0){
-      document.querySelector('main').innerHTML = "<div class='nopost'>NO Post Yet!</div>";
-    }
-    
+  
   for(i = 0; i < Storedata.length; i++){
          createtheme(Storedata[i]);
     }  
@@ -351,6 +348,21 @@ classCategories.forEach((category,index)=>{
    });
 })
 
+const AllD  = document.querySelector('.All');
+const technologyD = document.querySelector('.technology');
+const healthfitnessD = document.querySelector('.health-fitness');
+const travelD = document.querySelector('.travel');
+const edulearnyD = document.querySelector('.education-learning');
+const lifestyleyD = document.querySelector('.lifestyle');
+const financeD = document.querySelector('.finance');
+const entertainmentD = document.querySelector('.entertainment');
+const foodD = document.querySelector('.food');
+const CategoryArr = [AllD,technologyD,healthfitnessD,travelD,edulearnyD,lifestyleyD,financeD,entertainmentD,foodD];
+for (const category of CategoryArr) {
+ if(category.innerHTML.trim() === ''){
+   category.innerHTML='<div class="nopost">NO Post Yet !</div>';
+ }
+}
 
 
 
@@ -363,104 +375,3 @@ classCategories.forEach((category,index)=>{
 
 
 
-
-/* <div class="theme classic-minimalist"> 
-<div class "Bgimg">
-<div class="hero">Hero Image Area</div>
-<div class="content"> 
-
-    <div class="title">Title Area</div>
-    <div class="meta">Author and Date Area</div> 
-    </div>
-    <div class="excerpt">Excerpt Area</div>
-</div>
-</div> */  
-
-
-// function createtheme(storedata) {
-//   const themeD = document.createElement('div');
-//   const heroD = document.createElement('div');
-//   const imgh = document.createElement('img');
-//   const contentD = document.createElement('div');
-//   const titleD = document.createElement('div');
-//   const metaD = document.createElement('div');
-//   const excerptD = document.createElement('div'); 
-//   const closebtn = document.createElement('button');
-//   const openDiv = document.createElement('div'); 
-//   const Bgdiv = document.createElement('div');
-
-//   openDiv.setAttribute('class', 'open');
-//   Bgdiv.setAttribute('class', 'bgimg');
-//   closebtn.innerHTML = '&times';
-//   closebtn.setAttribute('class', 'closebtn');
-//   themeD.appendChild(closebtn);
-//   themeD.classList.add('theme', `${storedata.theme}`);
-  
-//   // Apply theme styles
-//   metaD.style.color = `${storedata.MetaFcolor}`;
-//   metaD.style.backgroundColor = `${storedata.Metabgcolor}`;
-//   contentD.style.backgroundColor = `${storedata.ContentAbcolor}`;
-//   excerptD.style.color = `${storedata.PostCFcolor}`;
-//   excerptD.style.backgroundColor = `${storedata.postCbgcolor}`;
-//   titleD.style.color = `${storedata.TitleFcolor}`;
-//   themeD.style.backgroundColor = `${storedata.ThemeBcolor}`;
-//   titleD.style.backgroundColor = `${storedata.Titlebgcolor}`;
-//   heroD.style.backgroundColor = `${storedata.Hbgcolor}`;
-
-//   // Add classes
-//   heroD.setAttribute('class', 'hero');
-//   contentD.setAttribute('class', 'content');
-//   titleD.setAttribute('class', 'title');
-//   metaD.setAttribute('class', 'meta');
-//   excerptD.setAttribute('class', 'excerpt');
-  
-//   const storeurl = storedata.heroimage.trim();
-  
-//   // Check theme type
-//   if (storedata.theme === 'Background-imageTheme') {
-//     if (storeurl.startsWith('https') && storeurl !== '') {
-//       Bgdiv.style.backgroundImage = `url(${storeurl})`;
-//       Bgdiv.style.height = '450px';
-//       console.log("Background image applied:", Bgdiv.style.backgroundImage);
-//     } else {
-//       console.error("Invalid hero image URL:", storeurl);
-//     }
-//     heroD.style.height = '0px';
-//     titleD.style.background = 'transparent';
-//     metaD.style.background = 'transparent';
-//   } else {
-//     heroD.appendChild(imgh);
-//     imgh.setAttribute('src', `${storeurl}`);
-//     console.log("Hero image applied to heroD:", imgh.src);
-//   }
-
-//   titleD.innerText = storedata.title.trim(); 
-//   metaD.innerText = `${storedata.authorname.trim()} | ${storedata.postdate}`; 
-//   excerptD.innerHTML = storedata.postdata; 
-  
-//   Bgdiv.appendChild(titleD);
-//   Bgdiv.appendChild(metaD);
-//   contentD.appendChild(Bgdiv);
-//   contentD.appendChild(excerptD); 
-//   openDiv.appendChild(heroD);
-//   openDiv.appendChild(contentD); 
-//   themeD.appendChild(openDiv);
-
-//   if (storedata.bgColor !== storedata.fcolor) {
-//     themeD.style.color = storedata.fcolor;
-//     themeD.style.backgroundColor = storedata.bgColor;
-//     metaD.style.color = storedata.fcolor;
-//   }
-  
-//   document.querySelector('main').appendChild(themeD);
-
-//   openDiv.addEventListener('click', () => {
-//     excerptD.style.display = 'block'; 
-//     closebtn.style.display = 'block';
-//   });
-
-//   closebtn.addEventListener('click', () => {
-//     excerptD.style.display = 'none';
-//     closebtn.style.display = 'none';
-//   });
-// }
