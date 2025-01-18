@@ -507,21 +507,7 @@ h1{
   background-color: #111;
   color :#111;
 } 
-/* .dark-mode .editor{
-  background-color: #191919;
-  color: #f4f4f9;
-} 
-.dark-mode label{
-  color: #F9FAFB;
-} 
-.dark-mode .post_btn,.dark-mode .update_btn{
-  color:#F9FAFB;
-  background-color: #191919;
-} 
-.dark-mode .post_btn:hover,.dark-mode .update_btn:hover{
-  color:#111;
-  background: transparent; 
-} */
+
 
 .highlight {
   background-color: yellow; /* Highlight color */
@@ -553,9 +539,7 @@ li {
   background-color: #1E3A8A;
   color: #f4f4f9;
   padding: 5px 8px;
-  /* position: absolute;
-  top:10px;
-  right:10px; */
+ 
   transition: 0.3s ease-in-out;
   border-radius: 5px;
   border: none; 
@@ -644,8 +628,8 @@ table tr td{
 /* styling footer */
 footer {
   width: 100%;
-  background-color: #1e3a5f; /* Deep blue tone to match the header */
-  color: #ffffff; /* White text for contrast */
+  background-color: #1e3a5f; 
+  color: #ffffff; 
   padding: 20px 0;
   font-family: 'Arial', sans-serif;
   display: none;
@@ -670,13 +654,13 @@ footer {
 }
 
 .footer-links a {
-  color: #ffffff; /* White text */
+  color: #ffffff; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #ffd700; /* Golden hover effect */
+  color: #ffd700; 
 }
 
 .footer-social {
@@ -696,13 +680,13 @@ footer {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 4px;
-  background-color: #3b5998; /* Default background for icons */
+  background-color: #3b5998; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  background-color: #ffd700; /* Golden hover effect for icons */
-  color: #1e3a5f; /* Deep blue text on hover */
+  background-color: #ffd700; 
+  color: #1e3a5f; 
 }
 
 .footer-copy {
@@ -721,7 +705,7 @@ footer {
 }
 
 .footer-copy a:hover {
-  color: #ffd700; /* Golden hover for attribution link */
+  color: #ffd700;
 }
 
 @media (max-width: 768px) {
@@ -824,8 +808,7 @@ footer {
 }
 /* color collector */
 .colordisplay{ 
-  /* position: fixed;
-  top:-100%; */ 
+  
   position: relative;
   height: auto;
    margin: 0 auto;

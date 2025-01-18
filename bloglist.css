@@ -11,16 +11,15 @@ body {
   align-items: center;
   background-color: #F9FAFB;
  
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+
 }
 header {
   width: 100vw;
-  /* background-color: aqua; */
+ 
   position: fixed;
   top:0px;
   z-index:5; 
-  /* padding: 0 10px; */
+ 
 }
 
 .navbar {
@@ -35,7 +34,7 @@ header {
   display: flex;
   justify-content: space-around;
   gap:40px;
-  /* max-width: 100%; */
+  
 }
 .logo {
   font-size: 2rem;
@@ -258,7 +257,7 @@ header {
  
   display: block; 
  
- /* margin-left: auto; */
+ 
 
 }
 .nopost{
@@ -297,7 +296,7 @@ header {
 .content { 
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
+  
   margin-top: 30px;
 }
 .description{
@@ -330,11 +329,6 @@ header {
   padding: 10px;
 
 } 
-/* .category-item{
-  display: flex;
-  flex-direction: row;
-width: 100%;
-} */
 
 /* Classic Minimalist Theme */
 .classic-minimalist {
@@ -343,7 +337,7 @@ width: 100%;
  
 }
 .classic-minimalist .hero {
-  background-color: #ccc; /* Placeholder area */
+  background-color: #ccc; 
   min-height: 20px; 
 }
 .classic-minimalist title, .classic-minimalist .meta{
@@ -362,7 +356,7 @@ width: 100%;
   text-align: center;
 }
 .Light .hero {
-  background-color: #ccc; /* Placeholder area */
+  background-color: #ccc; 
   min-height: 20px; 
 }
 .Light .content {
@@ -383,7 +377,7 @@ width: 100%;
   text-align: center;
 }
 .Vintage .hero {
-  background-color: #F4D793; /* Placeholder area */
+  background-color: #F4D793; 
   min-height: 20px; 
 }
 .Vintage .content {
@@ -406,7 +400,7 @@ width: 100%;
   text-align: center;
 }
 .Retro .hero {
-  background-color: #F3F7EC; /* Placeholder area */
+  background-color: #F3F7EC; 
   min-height: 20px; 
 }
 .Retro .content {
@@ -427,7 +421,7 @@ width: 100%;
   text-align: center;
 }
 .Summer .hero {
-  background-color: #FFEEAD; /* Placeholder area */
+  background-color: #FFEEAD; 
   min-height: 20px; 
 }
 .Summer .content {
@@ -449,7 +443,7 @@ width: 100%;
   text-align: center;
 } 
 .nature-inspired .hero {
-  background-color: #97d897; /* Placeholder area */
+  background-color: #97d897;
  min-height: 20px; 
 }
 .nature-inspired .title,.nature-inspired .meta{
@@ -467,10 +461,10 @@ width: 100%;
   text-align: center;
 }
 .modern-chic .hero {
-  background-color: #f4a1c4; /* Placeholder area */
+  background-color: #f4a1c4; 
  
   color: #ffffff;
-  /* font-size: 28px; */
+ 
   font-weight: bold;
 }
 .modern-chic .title,.modern-chic .meta{
@@ -493,14 +487,14 @@ width: 100%;
 
 }
 .tech-savvy .hero {
-  background-color: #3a3a50; /* Placeholder area */
+  background-color: #3a3a50; 
   min-height: 20px; 
 
 }
 .tech-savvy .content {
   display: grid;
   grid-template-columns: 1fr;
-  /* gap: 20px; */
+  
 }
 .tech-savvy .meta {
   grid-column: 1 / -1;
@@ -564,7 +558,7 @@ width: 100%;
 
 .category-item{
   display: none;
-  /* padding: 10px; */
+  
   flex-wrap: wrap;
   justify-content:start;
   width: 100%;
@@ -582,8 +576,8 @@ width: 100%;
 /* Footer Styles */
 footer {
   width: 100%;
-  background-color: #1e3a5f; /* Deep blue tone to match the header */
-  color: #ffffff; /* White text for contrast */
+  background-color: #1e3a5f; 
+  color: #ffffff; 
   padding: 20px 0;
   font-family: 'Arial', sans-serif;
 }
@@ -607,13 +601,13 @@ footer {
 }
 
 .footer-links a {
-  color: #ffffff; /* White text */
+  color: #ffffff; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #ffd700; /* Golden hover effect */
+  color: #ffd700; 
 }
 
 .footer-social {
@@ -633,13 +627,13 @@ footer {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 4px;
-  background-color: #3b5998; /* Default background for icons */
+  background-color: #3b5998; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  background-color: #ffd700; /* Golden hover effect for icons */
-  color: #1e3a5f; /* Deep blue text on hover */
+  background-color: #ffd700; 
+  color: #1e3a5f; 
 }
 
 .footer-copy {
@@ -658,7 +652,7 @@ footer {
 }
 
 .footer-copy a:hover {
-  color: #ffd700; /* Golden hover for attribution link */
+  color: #ffd700; 
 }
 
 
@@ -700,7 +694,7 @@ footer {
     flex-direction: column;
     background-color: #1E3A8A;
     width: 100%;
-    /* max-width: 100vw; */
+  
     text-align: center;
     transition: 0.3s;
     z-index: -2;
@@ -747,7 +741,7 @@ footer {
     position: fixed;
     left:0px;
     top:-100%;
-    /* gap:0; */
+   
     background-color: #1E3A8A;
     width:auto;
     max-width: 100vw;
@@ -794,9 +788,7 @@ footer {
   .footer-social {
     margin-top: 15px;
   }  
- /* .theme{
-  min-width: 300px;
- } */
+ 
 }
  
 @media (min-width:769px) {
@@ -830,14 +822,7 @@ footer {
     width: 100%;
    }
 }
-/* <div class="theme classic-minimalist">
-<div class="hero">Hero Image Area</div>
-<div class="content">
-    <div class="title">Title Area</div>
-    <div class="meta">Author and Date Area</div>
-    <div class="excerpt">Excerpt Area</div>
-</div>
-</div> */   
+  
 
 
 .excerpt ul,.excerpt ol{

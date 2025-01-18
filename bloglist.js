@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const addNoteBtn = document.getElementById("add-note");
   const notesList = document.getElementById("notes-list");
 
-  // Load notes from localStorage
+ 
   const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
 
   function renderNotes() {
-    notesList.innerHTML = ""; // Clear existing notes
+    notesList.innerHTML = ""; 
     savedNotes.forEach((note, index) => {
       const li = document.createElement("li");
       li.innerHTML = `
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderNotes();
   }
 
-  // Event Listeners
+  
   addNoteBtn.addEventListener("click", addNote);
   notesList.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-note")) {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Initial Render
+  
   renderNotes();
 });
 
@@ -99,13 +99,12 @@ const key = 'blogdata';
     if(Storedata.length === 0){
       document.querySelector('main').innerHTML = "<div class='nopost'>NO Post Yet!</div>";
     }
-    console.log(Storedata);
+    
   for(i = 0; i < Storedata.length; i++){
          createtheme(Storedata[i]);
     }  
   }
 const data = JSON.parse(localStorage.getItem(key));
-// console.log(data);
 
 
 function createtheme(storedata){ 
@@ -131,14 +130,7 @@ function createtheme(storedata){
  
  
 
-//  <div class="category-item technology">Technology</div>
-//  <div class="category-item health-fitness">Health & Fitness</div>
-//  <div class="category-item travel">Travel</div>
-//  <div class="category-item education-learning">Education & Learning</div>
-//  <div class="category-item lifestyle">Lifestyle</div>
-//  <div class="category-item finance">Finance</div>
-//  <div class="category-item entertainment">Entertainment</div>
-//  <div class="category-item food">Food</div>
+
  closebtn.innerHTML = '&times';
  readMore.innerHTML = 'Read More';
  themeD.classList.add('theme', `${storedata.theme}`);

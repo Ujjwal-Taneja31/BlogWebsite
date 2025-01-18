@@ -388,7 +388,8 @@ footer {
   .new-start{
     flex-direction: column-reverse;
     align-items: center; 
-    height: auto;
+    height: auto; 
+    gap:20px;
   }
   #startimg{
     height: 250px;
