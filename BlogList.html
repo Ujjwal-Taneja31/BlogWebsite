@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Blog Themes</title> 
+    <link rel="stylesheet" href="./bloglist.css">
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo">BlogCrafts</div>
+  
+          <ul class="nav-menu">
+            <li class="nav-items"><a href="./index.html" class="nav-link" target="_self">Home</a></li>
+            <li class="nav-items"><a href="./Editor.html" class="nav-link" target="_self">Editor</a></li>
+            <li class="nav-items"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-items"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+  
+          <div class="search">
+            <input type="text" placeholder="Search Articles" id="inputA" />
+            <!--inputA : input Article-->
+            <button id="Asearch"><i class="fa fa-search icon"></i></button>
+            <!--Asearch : Article Search-->
+   
+            
+          </div>
+          <span class="searchIcon"><i class="fa fa-search icon"></i></span>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+    
+      </header> 
+      <div class="notePad">
+      <button  class="Notebtn" onclick="openNotePad()"><i class="fas fa-pen"></i></button>
+    </div> 
+    <section id="note-taking-tool">
+      <h2>Notes</h2>
+      <textarea id="note-input" placeholder="Write your note here..."></textarea>
+      <button id="add-note">Add Note</button>
+      <ul id="notes-list"></ul>
+    </section> 
+  <div class="container">
+    <div class="sidebarlogo">
+      <span class="side1"></span>
+      <span class="side2"></span>
+      <span></span>
+    </div>
+  <div class="sidebar">
+    <div class="close-sidebar"><i class="fa-solid fa-xmark"></i></div> 
+    <div> <span class="nav-category All1">All</span></div>
+    <div> <span class="nav-category">Technology</span></div>
+    <div> <span class="nav-category">Health & Fitness</span></div>
+    <div>  <span class="nav-category">Travel</span></div>
+    <div> <span class="nav-category">Education & Learning</span></div>
+    <div> <span class="nav-category">Lifestyle</span></div>
+    <div>  <span class="nav-category">Finance</span></div>
+    <div><span class="nav-category">Entertainment</span></div>
+    <div class="last-cat">  <span class="nav-category ">Food</span></div>
+    </div>
+  <main class="content-area">
+    <div class="category-item All"></div>
+    <div class="category-item technology"></div>
+    <div class="category-item health-fitness"></div>
+    <div class="category-item travel"></div>
+    <div class="category-item education-learning"></div>
+    <div class="category-item lifestyle"></div>
+    <div class="category-item finance"></div>
+    <div class="category-item entertainment"></div>
+    <div class="category-item food"></div>
+  </main>
+    <!-- Classic Minimalist Theme -->
+    <!-- <div class="theme classic-minimalist">
+        <div class="hero">Hero Image Area</div>
+        <div class="content">
+            <div class="title">Title Area</div>
+            <div class="meta">Author and Date Area</div>
+            <div class="excerpt">Excerpt Area</div>
+        </div>
+    </div> -->
+
+    <!-- Nature-inspired Theme -->
+    <!-- <div class="theme nature-inspired">
+        <div class="hero">Hero Image Area</div>
+        <div class="content">
+            <div class="title">Title Area</div>
+            <div class="meta">Author and Date Area</div>
+            <div class="excerpt">Excerpt Area</div>
+        </div>
+    </div> -->
+
+    <!-- Modern Chic Theme -->
+    <!-- <div class="theme modern-chic">
+        <div class="hero">Hero Image Area</div>
+        <div class="content">
+            <div class="title">Title Area</div>
+            <div class="meta">Author and Date Area</div>
+            <div class="excerpt">Excerpt Area</div>
+        </div>
+    </div> -->
+
+    <!-- Tech-savvy Theme -->
+    <!-- <div class="theme tech-savvy">
+        <div class="hero">Hero Image Area</div>
+        <div class="content">
+            <div class="title">Title Area</div>
+            <div class="meta">Author and Date Area</div>
+            <div class="excerpt">Excerpt Area</div>
+        </div> -->
+    </div> 
+  
+    <footer>
+        <div class="footer-container">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#privacy-policy">Privacy Policy</a></li>
+              <li><a href="#terms-conditions">Terms & Conditions</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-social">
+            <p>Follow Us:</p>
+            <a href="#" class="social-icon">FB</a>
+            <!-- Facebook -->
+            <a href="#" class="social-icon">TW</a>
+            <!-- Twitter -->
+            <a href="#" class="social-icon">IG</a>
+            <!-- Instagram -->
+          </div>
+         
+          <div class="footer-copy">
+            <p>&copy; 2025 BlogCrafts. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>  
+      <script src="./bloglist.js"></script>
+</body>
+</html>

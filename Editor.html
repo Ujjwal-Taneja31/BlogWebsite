@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grenze+Gotisch:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Passion+One:wght@400;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Vinyl&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./editorstyle.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>Log In</h1>
+      <input type="text" placeholder="Enter Email....."  value="blogman@gmail.com"/>
+      <input
+        type="password"
+        placeholder="Enter your password...."
+        value="blog123"
+       
+      />
+      <button id="sign_in">login</button>
+      <div class="alert"></div>
+    </div>
+    <div class="notifi"></div>
+    <div class="myblog">
+      <header>
+        <nav class="navbar">
+          <div class="logo">BlogCrafts</div>
+
+          <ul class="nav-menu">
+            <li class="nav-items"><a href="./index.html" class="nav-link" target="_self">Home</a></li>
+            <li class="nav-items">
+              <a href="./BlogList.html" class="nav-link" target="_self">Blog list</a>
+            </li>
+            <li class="nav-items"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-items"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="search">
+            <input type="text" placeholder="Search Articles" id="inputA" />
+            <!--inputA : input Article-->
+            <button id="Asearch"><i class="fa fa-search icon"></i></button>
+            <!--Asearch : Article Search-->
+          </div>
+          <span class="searchIcon"><i class="fa fa-search icon"></i></span>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+     
+      <div class="navArrows">
+        <button onclick="toggleDarkMode()" id="mode"><i class="fa-solid fa-sun"></i></button> 
+        <button  class="Notebtn" onclick="openNotePad()"><i class="fas fa-pen"></i></button>
+        <button onclick="gotoMy_content()" id="pp"><i class="fa-brands fa-pied-piper-pp"></i></button>
+        
+      </div> 
+      <section id="note-taking-tool">
+        <h2>Notes</h2>
+        <textarea id="note-input" placeholder="Write your note here..."></textarea>
+        <button id="add-note">Add Note</button>
+        <ul id="notes-list"></ul>
+      </section>  
+      <div class="colordisplay">
+        <button class="close-colordisplay" onclick="colorsetterclose()">&times;</button>
+        <div class="inputcolor">
+          <h3>Color-setters</h3>
+          <label for="">Theme:
+          <input type="text" name="theme-bgColor" id="Thbgcolor" placeholder="B-color" class="pcolor"></label>
+          <label for="">content-area:
+          <input type="text" name="content-area-bgcolor" id="Cbgcolor" placeholder="B-color"  class="pcolor"></label>
+          <label for="">Hero-Section:
+            <input type="text" name="content-area-bgcolor" id="Hbgcolor" placeholder="B-color"  class="pcolor"></label>
+          </label>
+          <label for="">Title:
+          <input type="text" name="" id="Tfcolor" placeholder="F-color"  class="pcolor">
+          <input type="text" name="" id="Tbgcolor" placeholder="B-color"  class="pcolor"></label>
+          <label for="">Meta-content:
+          <input type="text" name="" id="Mfcolor" placeholder="F-color"  class="pcolor">
+          <input type="text" name="" id="Mbgcolor" placeholder="B-color"  class="pcolor"></label>
+          <label for="">Post-content:
+          <input type="text" name="" id="Pfcolor" placeholder="F-color"  class="pcolor">
+          <input type="text" name="" id="Pbgcolor" placeholder="B-color"  class="pcolor"> </label> 
+    
+          <input type="color" name="" id="" class="scolor">
+          
+        </div>  
+      </div>
+      <div class="meta-content">
+        <input
+          type="text"
+          name="author-name"
+          
+          class="author-name"
+          placeholder="Enter Author name....(up to 70ch)"
+          maxlength="70ch"
+        />
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="title"
+          placeholder="Enter Title..... (up to 100ch)"
+          maxlength="100"
+        />
+        <textarea name="Description" id="discription" class="description" rows="8" placeholder="Enter Description here... upto(150ch)" maxlength="200"></textarea>
+        
+
+       <input
+        type="url"
+        name="heroimgurl"
+        id="heroimage"
+        class="heroimage"
+        placeholder="Enter Image url"
+        />
+     
+          <button class="setColor" onclick="colorsetteropen()">SeT Colors</button>
+          <select name="blog-categories" id="blog-categories">
+            <option value="" disabled selected>Categories</option>
+            <option value="technology">Technology</option>
+            <option value="health-fitness">Health & Fitness</option>
+            <option value="travel">Travel</option>
+            <option value="education-learning">Education & Learning</option>
+            <option value="lifestyle">Lifestyle</option>
+            <option value="finance">Finance</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="food">Food</option>
+          </select>
+           <div class="reperesnting-themes">
+          <select name="theme" id="theme" onchange="changeThemeImage(this.value)">
+            <option value="classic-minimalist">classic-minimalist</option>
+            <option value="tech-savvy">tech-savvy</option>
+            <option value="modern-chic">modern-chic</option>
+            <option value="nature-inspired">nature-inspired</option> 
+            <option value="Light">Light</option>
+            <option value="Vintage">Vintage</option>
+            <option value="Retro">Retro</option>
+            <option value="Summer">Summer</option>
+          </select>
+          <div class="themeimage">
+            <img src="./Theme1.png" alt="Theme image" class="diplayTheme"/>
+          </div>
+        </div>
+
+        <button class="next" onclick="goToeditor()">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="main_content">
+        <div class="editor-container">
+          <h1>Editor</h1>
+          <div class="toolbar">
+            <button onclick="formatText('bold')">
+              <i class="fa-solid fa-bold"></i>
+            </button>
+            <button onclick="formatText('italic')">
+              <i class="fa-solid fa-italic"></i>
+            </button>
+            <button onclick="formatText('underline')">
+              <i class="fa-solid fa-underline"></i>
+            </button>
+            <button onclick="strikeThroughText()">
+              <i class="fa-solid fa-strikethrough"></i>
+            </button>
+            <button onclick="subscriptText()">
+              <i class="fa-solid fa-subscript"></i>
+            </button>
+            <button onclick="superscriptText()">
+              <i class="fa-solid fa-superscript"></i>
+            </button>
+            <select onchange="changeFontSize(this.value)">
+              <option value="">Font-Size</option>
+              <option value="1">Smallest size</option>
+              <option value="2">Smaller size</option>
+              <option value="3">Normal (default)</option>
+              <option value="4">Slightly larger</option>
+              <option value="5">Large</option>
+              <option value="6">Larger</option>
+              <option value="7">Largest</option>
+            </select>
+
+            <button onclick="highlightText()">
+              <i class="fa-solid fa-highlighter"></i>
+            </button>
+            <button onclick="changeTextAlign('left')">
+              <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button onclick="changeTextAlign('center')">
+              <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button onclick="changeTextAlign('right')">
+              <i class="fa-solid fa-align-right"></i>
+            </button>
+            <button onclick="insertUnorderedList()">
+              <i class="fa-solid fa-list-ul"></i>
+            </button>
+            <button onclick="insertOrderedList()">
+              <i class="fa-solid fa-list-ol"></i>
+            </button>
+            <button onclick="insertLink()">
+              <i class="fa-solid fa-link"></i>
+            </button>
+            <button onclick="insertImage()">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <select
+              id="font-family-select"
+              onchange="changeFontFamily(this.value)"
+            >
+              <option value="">Fonts</option>
+              <option value="Arial">Arial</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Verdana">Verdana</option>
+            </select>
+            <button onclick="document.execCommand('undo')">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <button onclick="document.execCommand('redo')">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+
+            <label for="text-color-picker"
+              >Text Color:
+              <input
+                type="color"
+                id="text-color-picker"
+                onchange="changeTextColor(this.value)"
+              />
+            </label>
+            <label for="background-color-picker"
+              >Background Color:
+              <input
+                type="color"
+                id="background-color-picker"
+                onchange="changeBackgroundColor(this.value)"
+              />
+            </label>
+          </div>
+          <div class="title-container">
+            <!-- <input type="text" name="title" id="title" placeholder="Enter Title" required> -->
+          </div>
+          <div
+            class="editor"
+            contenteditable="true"
+            aria-placeholder="Type your text here"
+          ></div>
+          <button id="post_btn" class="post_btn">Post Now</button>
+          <button id="update_btn" class="update_btn">Update Post</button>
+        </div>
+      </div>
+
+      <div class="my_content">
+        <button class="add-new" onclick="gotometaData()"><i class="fa-solid fa-plus"></i></button>
+        <h2>Previos Posts</h2>
+        <div class="thead"><div class="th th">SR.</div><div class="th2 th">Tittle</div></div>
+        <div class="tableContent">
+         <table border="1" >
+         
+         </table>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <ul>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#terms-conditions">Terms & Conditions</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <p>Follow Us:</p>
+          <a href="#" class="social-icon">FB</a>
+          <!-- Facebook -->
+          <a href="#" class="social-icon">TW</a>
+          <!-- Twitter -->
+          <a href="#" class="social-icon">IG</a>
+          <!-- Instagram -->
+        </div>
+
+        <div class="footer-copy">
+          <p>&copy; 2025 BlogCrafts. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./editorjs.js"></script>
+  </body>
+</html>
